@@ -166,8 +166,6 @@ namespace VichMatLaba3
                 }
             }
 
-            
-
             float[][] system = new float[k][];
 
             for (int i = 0; i < system.Length; i++)

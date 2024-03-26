@@ -37,6 +37,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -77,7 +80,7 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
-            series2.Name = "1";
+            series2.Name = "1 многочлен";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
@@ -101,6 +104,21 @@
             series7.Color = System.Drawing.Color.Black;
             series7.Legend = "Legend1";
             series7.Name = "Произвольный";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series8.LabelForeColor = System.Drawing.Color.Orange;
+            series8.Legend = "Legend1";
+            series8.Name = "1 вручную";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series9.LabelForeColor = System.Drawing.Color.DarkViolet;
+            series9.Legend = "Legend1";
+            series9.Name = "2 вручную";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series10.Color = System.Drawing.Color.Pink;
+            series10.Legend = "Legend1";
+            series10.Name = "3 вручную";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
@@ -108,6 +126,9 @@
             this.chart1.Series.Add(series5);
             this.chart1.Series.Add(series6);
             this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
+            this.chart1.Series.Add(series10);
             this.chart1.Size = new System.Drawing.Size(675, 490);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -155,17 +176,20 @@
             "Сглаживающий многочлен 1 степени",
             "Сглаживающий многочлен 2 степени",
             "Сглаживающий многочлен 3 степени",
-            "Произвольный многочлен 4й степени"});
+            "Произвольный многочлен 4й степени",
+            "многочлен 1 степени (вручную)",
+            "многочлен 2 степени (вручную)",
+            "многочлен 3 степени (вручную)"});
             this.checkedListBox1.Location = new System.Drawing.Point(7, 22);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(374, 158);
+            this.checkedListBox1.Size = new System.Drawing.Size(374, 224);
             this.checkedListBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 246);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 326);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -176,7 +200,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(7, 213);
+            this.label1.Location = new System.Drawing.Point(3, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(387, 20);
             this.label1.TabIndex = 4;

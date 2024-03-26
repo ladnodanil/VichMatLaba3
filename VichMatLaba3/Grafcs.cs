@@ -29,15 +29,16 @@ namespace VichMatLaba3
             chart1.ChartAreas[0].AxisY.Maximum = 20;
             chart1.ChartAreas[0].AxisY.Interval = 2;
 
-                dataGridView1.ColumnCount = 5;
-                dataGridView1.RowCount = 2;
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridView1.ColumnHeadersVisible = true; 
+            dataGridView1.ColumnCount = 5;
+            dataGridView1.RowCount = 2;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersVisible = true;
 
-                for (int i = 0; i < dataGridView1.ColumnCount; i++)
-                {
-                    dataGridView1.Columns[i].HeaderText = "a" + i.ToString(); 
-                }
+            for (int i = 0; i < dataGridView1.ColumnCount; i++)
+            {
+                dataGridView1.Columns[i].HeaderText = "a" + i.ToString();
+            }
+            this.chart1.Series[0].ToolTip = "X = #VALX, Y = #VALY";
             for (int i = 0; i < xi.Count; i++)
             {
                 this.chart1.Series[0].Points.AddXY(xi[i], fxi[i]);
@@ -46,6 +47,7 @@ namespace VichMatLaba3
 
         private void button1_Click(object sender, EventArgs e)
         {
+
 
             if (checkedListBox1.GetItemChecked(0))
             {
@@ -101,10 +103,29 @@ namespace VichMatLaba3
                 for (float i = -5; i <= 5; i += step)
                 {
 
-                    this.chart1.Series[6].Points.AddXY(i, ai[4]* Math.Pow(i,4)  +ai[3] * Math.Pow(i, 3) + ai[2] * Math.Pow(i, 2) + ai[1] * i + ai[0]);
+                    this.chart1.Series[6].Points.AddXY(i, ai[4] * Math.Pow(i, 4) + ai[3] * Math.Pow(i, 3) + ai[2] * Math.Pow(i, 2) + ai[1] * i + ai[0]);
                 }
-
-
+            }
+            if (checkedListBox1.GetItemChecked(6))
+            {   
+                for (float i = -5; i <= 5; i += 0.1f)
+                {
+                    this.chart1.Series[7].Points.AddXY(i, -3.19*i + 11.466);
+                }
+            }
+            if (checkedListBox1.GetItemChecked(7))
+            {   
+                for (float i = -5; i <= 5; i += 0.1f)
+                {
+                    this.chart1.Series[8].Points.AddXY(i, 0.045 * Math.Pow(i,2) - 3.276*i+11.291);
+                }
+            }
+            if (checkedListBox1.GetItemChecked(8))
+            {
+                for (float i = -5; i <= 5; i += 0.1f)
+                {
+                    this.chart1.Series[9].Points.AddXY(i, 0.059 * Math.Pow(i,3) - 0.138 * Math.Pow(i,2) -3.539 * i +11.789);
+                }
             }
 
 
@@ -118,6 +139,7 @@ namespace VichMatLaba3
             {
                 this.chart1.Series[i].Points.Clear();
             }
+            
         }
     }
 }
